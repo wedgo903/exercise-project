@@ -6,3 +6,4 @@ esac
   --logs|-l) for i in {1..100}; do echo -e "log$i.txt\nskrypt.sh\n$(date)" > log$i.txt; done ;;
   --logs|-l) count=${2:-100}; for i in $(seq 1 $count); do echo -e "log$i.txt\nskrypt.sh\n$(date)" > log$i.txt; done ;;
   --help|-h) echo "Dostępne opcje: --date (-d), --logs (-l) [N], --help (-h)" ;;
+  --init) git clone https://github.com/twoj-nazwa-uzytkownika/exercise-project.git; export PATH=$PATH:$(pwd)/exercise-project ;;
